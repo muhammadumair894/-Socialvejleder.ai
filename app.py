@@ -132,7 +132,7 @@ async def start_chat():
     thread = await async_openai_client.beta.threads.create()
     # Store thread ID in user session for later use
     cl.user_session.set("thread_id", thread.id)
-    await cl.Avatar(name=assistant.name, path="./public/logo.png").send()
+    await cl.Avatar(name=assistant.name, path="./public/chatbot.gif").send()
     await cl.Message(content=f"Hello, I'm {assistant.name}!", disable_feedback=True).send()
     
 
